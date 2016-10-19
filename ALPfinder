@@ -1,0 +1,25 @@
+#!/bin/bash
+echo Finding the longest path
+echo "########################"
+wholestr=$1
+echo $wholestr
+echo "########################"
+echo -e $wholestr
+echo "########################"
+
+echo -e $wholestr | grep $'\t.bin'
+echo "########################"
+IFS=$'\n';
+file=($(echo -e $wholestr | grep '\.'))
+for i in "${file[@]}"
+do
+    echo "########################"
+    echo $i
+    echo -e $i | grep -o $'\t' | wc -l
+done
+
+files=($(echo -e $1 | grep '\.' | tr -d '\t'))
+#echo ${files[0]}
+#echo ${files[1]}
+#echo ${files[2]}
+
