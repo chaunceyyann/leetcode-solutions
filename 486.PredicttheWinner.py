@@ -1,4 +1,4 @@
-<F11><F11>class Solution(object):
+class Solution(object):
     def PredictTheWinner(self, nums):
         sum=[0,0]
         print "A",playerPick(nums,1,0,sum)
